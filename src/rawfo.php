@@ -31,7 +31,6 @@ class rawfo{
     }
     $repo=$akur[1];
     $file=$akur[2];
-    // 9r3i/rawfo/master/README.md
     $pbase='https://raw.githubusercontent.com/%s/';
     $base=sprintf($pbase,$repo);
     $file.=preg_match('/^[^\/]+\/$/',$file)?'index.html':'';
