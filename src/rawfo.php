@@ -9,7 +9,7 @@
  * @usage: new rawfo;
  **/
 class rawfo{
-  const version='1.0.0';
+  const version='1.0.1';
   private $mime=[];
   public function __construct(){
     @set_time_limit(false);
@@ -25,7 +25,7 @@ class rawfo{
       $pathname=explode('?',$_SERVER['REQUEST_URI'])[0];
       $path=preg_replace('/^\//','',$pathname);
     }
-    $ptrn='/^([^\/]+\/[^\/]+\/[^\/]+)\/(.*)$/';
+    $ptrn='/^([^\/]+\/[^\/]+)\/(.*)$/';
     if(!preg_match($ptrn,$path,$akur)){
       return $this->o('Error: Invalid request.');
     }
